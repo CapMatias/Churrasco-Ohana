@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrasco Juventude Ohana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Música -->
+    <audio id="musica" loop>
+        <source src="videoplayback.m4a" type="audio/mp4">
+    </audio>
+
+    <button id="playBtn">▶ Música</button>
+
+    <div class="overlay">
+
+        <header>
+            <h3 class="endereco">📍 Local do Churrasco</h3>
+
+<p class="endereco-texto">
+    Rua Exemplo, 123 – Bairro Centro
+</p>
+
+<a 
+  class="btn-maps"
+  href="https://maps.app.goo.gl/3FDgjUmGwp8oNZvd7"
+  target="_blank"
+>
+    📍 Ver localização no Google Maps
+</a>
+
+            <h1 class="titulo-oh animate-neon">Churrasco</h1>
+            <h2 class="sub-oh animate-neon">Ohana</h2>
+           
+            <p class="desc">Escolha o que você irá levar!</p>
+        </header>
+
+        <div class="nome-box">
+            <label>Seu nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="lista">
+            <ul id="item-list"></ul>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
