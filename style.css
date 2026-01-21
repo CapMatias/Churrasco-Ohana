@@ -1,0 +1,175 @@
+/* ===== ESTILO GERAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('ohana.jpeg') no-repeat center top;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+.overlay {
+    background: rgba(0,0,0,0.45);
+    min-height: 100vh;
+    padding: 20px 16px;
+    color: white;
+}
+
+/* ===== TEXTOS PRINCIPAIS ===== */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-oh {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    
+}
+
+.sub-oh {
+    font-size: 28px;
+    margin-top: -6px;
+    font-weight: 700;
+}
+
+.desc {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* ===== CAMPO DE NOME ===== */
+.nome-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nome-box input {
+    padding: 12px;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ===== LISTA ===== */
+.lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista li {
+    background: rgba(255,255,255,0.75);
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 12px;
+    color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    backdrop-filter: blur(4px);
+}
+
+.nome-item {
+    font-size: 13px;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    transform: scale(1.06);
+}
+
+/* ===== BOTÃO FIXO ===== */
+#playBtn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    background: rgba(255,255,255,0.85);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    transition: 0.25s ease;
+}
+
+#playBtn:hover {
+    transform: scale(1.06);
+}
+
+/* ===== ANIMAÇÃO NEON ===== */
+.animate-neon {
+    animation: neonPulse 2s infinite alternate, floatY 4s infinite ease-in-out;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #ffea00, 0 0 40px #ffea00, 0 0 60px #003cff; }
+    100% { text-shadow: 0 0 15px #fff, 0 0 30px #ffea00, 0 0 60px #ffea00, 0 0 80px #003cff; }
+}
+
+@keyframes floatY {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===== RESPONSIVO REAL PARA CELULARES ===== */
+@media (max-width: 600px) {
+
+    .overlay {
+        padding: 14px 12px;
+    }
+
+    .titulo-oh {
+        font-size: 34px;
+    }
+
+    .sub-oh {
+        font-size: 22px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .lista li {
+        flex-direction: column;
+        text-align: left;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    #playBtn {
+        padding: 8px 12px;
+        font-size: 13px;
+        right: 10px;
+        top: 10px;
+    }
+}
